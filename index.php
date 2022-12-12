@@ -27,6 +27,8 @@ require __DIR__ . "./Layouts/dogs_products.php";
 
 require __DIR__ . "./Layouts/cats_products.php";
 
+require __DIR__ . "./register.php";
+
 require __DIR__ . "./Layouts/footer.php"
 
 ?>

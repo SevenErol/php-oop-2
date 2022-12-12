@@ -7,8 +7,8 @@ class Customer
     public $surname;
     public $email;
     public $date_of_birth;
-    public $registration;
-    public $discount;
+    public $registration = false;
+    public $discount = 0;
 
     public function __construct($name, $surname, $email, $date_of_birth)
     {

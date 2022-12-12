@@ -1,72 +1,76 @@
-<div class="container p-3">
+<section id="dogs">
 
-    <h2 class="text-center">Dogs Products</h2>
+    <div class="container p-3">
 
-    <div class="row p-5 align-items-stretch">
+        <h2 class="text-center">Dogs Products</h2>
 
-        <?php foreach ($products_dog as $key => $product) : ?>
-            <div class="col-4">
+        <div class="row p-5 align-items-stretch">
 
-                <div class="card" style="height: 100% ;">
-                    <img class="img-fluid" src="<?php echo $product->image ?>" alt="">
+            <?php foreach ($products_dog as $key => $product) : ?>
+                <div class="col-4">
 
-                    <div class="card-body d-flex flex-column justify-content-between">
+                    <div class="card" style="height: 100% ;">
+                        <img class="img-fluid" src="<?php echo $product->image ?>" alt="">
 
-                        <h4 class="text-center mb-5"><?php echo $product->name ?></h4>
+                        <div class="card-body d-flex flex-column justify-content-between">
 
-                        <p><strong>Description: </strong><?php echo $product->description ?></p>
+                            <h4 class="text-center mb-5"><?php echo $product->name ?></h4>
 
-                        <div class="d-flex flex-column">
+                            <p><strong>Description: </strong><?php echo $product->description ?></p>
 
-                            <?php if ($product->availability) : ?>
+                            <div class="d-flex flex-column">
 
-                                <div class="d-flex align-items-center">
+                                <?php if ($product->availability) : ?>
 
-                                    <p class="m-0 p-0">The product is available now</p>
+                                    <div class="d-flex align-items-center">
 
-                                    <i class="fa-solid fa-circle green ms-2"></i>
+                                        <p class="m-0 p-0">The product is available now</p>
+
+                                        <i class="fa-solid fa-circle green ms-2"></i>
+
+                                    </div>
+
+
+
+                                <?php else : ?>
+
+                                    <div class="d-flex align-items-center">
+
+                                        <p class="m-0 p-0">We are sorry the product is not available</p>
+
+                                        <i class="fa-solid fa-circle red ms-2"></i>
+
+                                    </div>
+
+
+                                <?php endif; ?>
+
+                                <div>
+                                    <strong><?php echo $product->price ?></strong>
+                                </div>
+
+                                <div class="text-center">
+
+                                    <i class="fa-solid fa-dog"></i>
 
                                 </div>
 
+                                <p class="category text-center mt-3"><strong>Category: </strong><?php echo $product->category->type ?></p>
 
-
-                            <?php else : ?>
-
-                                <div class="d-flex align-items-center">
-
-                                    <p class="m-0 p-0">We are sorry the product is not available</p>
-
-                                    <i class="fa-solid fa-circle red ms-2"></i>
-
-                                </div>
-
-
-                            <?php endif; ?>
-
-                            <div>
-                                <strong><?php echo $product->price ?></strong>
-                            </div>
-
-                            <div class="text-center">
-
-                                <i class="fa-solid fa-dog"></i>
 
                             </div>
-
-                            <p class="category text-center mt-3"><strong>Category: </strong><?php echo $product->category->type ?></p>
 
 
                         </div>
-
 
                     </div>
 
                 </div>
 
-            </div>
+            <?php endforeach ?>
 
-        <?php endforeach ?>
+        </div>
 
     </div>
 
-</div>
+</section>
