@@ -2,7 +2,7 @@
 
 class Category
 {
-    protected $type;
+    public $type;
 
     public function __construct($type)
     {

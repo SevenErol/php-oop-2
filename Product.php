@@ -7,7 +7,7 @@ class Product
     public $description;
     public $availability;
     public $price;
-    protected $category;
+    public $category;
     public $quantity;
 
     public function __construct($image, $name, $description, Bool $availability, $price, Category $category, Int $quantity)
@@ -15,7 +15,7 @@ class Product
         $this->image = $image;
         $this->name = $name;
         $this->description = $description;
-        $this->avialability = $availability;
+        $this->availability = $availability;
         $this->price = $price;
         $this->category = $category;
         $this->quantity = $quantity;
