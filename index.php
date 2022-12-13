@@ -6,6 +6,8 @@ require __DIR__ . './Models/Category.php';
 
 require __DIR__ . './Models/WelcomeMessage.php';
 
+require __DIR__ . './Models/CatchException.php';
+
 $products_dog = [
     new Product('https://picsum.photos/400/200', 'bowl', 'Multifunctional bowl for food and water', true, '24.99£', new Category('objects'), 7),
     new Product('https://picsum.photos/400/200', 'ball', 'Gum ball for playing', false, '24.99£', new Category('games'), 5),
