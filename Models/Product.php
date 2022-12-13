@@ -2,6 +2,7 @@
 
 class Product
 {
+
     public $image;
     public $name;
     public $description;
@@ -9,6 +10,7 @@ class Product
     public $price;
     public $category;
     public $quantity;
+
 
     public function __construct($image, $name, $description, Bool $availability, $price, Category $category, Int $quantity)
     {
